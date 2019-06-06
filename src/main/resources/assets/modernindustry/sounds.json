@@ -1,0 +1,22 @@
+{
+  "ambient_dark": {
+    "category": "ambient",
+    "subtitle": "modernindustry.subtitle.ambient_dark",
+    "sounds": [ "modernindustry:ambient_dark" ]
+  },
+	"ambient_dark_2": {
+   	 "category": "ambient",
+   	 "subtitle": "modernindustry.subtitle.ambient_dark",
+   	 "sounds": [ "modernindustry:ambient_dark_2" ]
+  },
+	"record_maze": {
+   	 "category": "record",
+  	  "subtitle": "modernindustry.subtitle.record_maze",
+  	  "sounds": [ "modernindustry:record_maze" ]
+  },
+	"record_waves": {
+ 	  "category": "record",
+ 	  "subtitle": "modernindustry.subtitle.record_waves",
+  	  "sounds": [ "modernindustry:record_waves" ]
+  }
+}

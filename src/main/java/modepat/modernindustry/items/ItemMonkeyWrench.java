@@ -1,7 +1,7 @@
 package modepat.modernindustry.items;
 
 import modepat.modernindustry.api.ReferenceModernIndustry;
-import modepat.modernindustry.core.BlockCore;
+import modepat.modernindustry.core.objects.BlockCore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;

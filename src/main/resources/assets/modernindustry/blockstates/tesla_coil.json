@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "": [
+            { "model": "modernindustry:block/tesla_coil" },
+            { "model": "modernindustry:block/tesla_coil", "y": 90 },
+            { "model": "modernindustry:block/tesla_coil", "y": 180 },
+            { "model": "modernindustry:block/tesla_coil", "y": 270 },
+            { "model": "modernindustry:block/tesla_coil_state_1" },
+            { "model": "modernindustry:block/tesla_coil_state_1", "y": 90 },
+            { "model": "modernindustry:block/tesla_coil_state_1", "y": 180 },
+            { "model": "modernindustry:block/tesla_coil_state_1", "y": 270 },
+            { "model": "modernindustry:block/tesla_coil_state_2" },
+            { "model": "modernindustry:block/tesla_coil_state_2", "y": 90 },
+            { "model": "modernindustry:block/tesla_coil_state_2", "y": 180 },
+            { "model": "modernindustry:block/tesla_coil_state_2", "y": 270 },
+            { "model": "modernindustry:block/tesla_coil_state_3" },
+            { "model": "modernindustry:block/tesla_coil_state_3", "y": 90 },
+            { "model": "modernindustry:block/tesla_coil_state_3", "y": 180 },
+            { "model": "modernindustry:block/tesla_coil_state_3", "y": 270 }
+        ]
+     }
+}

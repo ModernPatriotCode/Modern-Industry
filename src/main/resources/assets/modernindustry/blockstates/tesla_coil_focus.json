@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "": [
+            { "model": "modernindustry:block/tesla_coil_focus" },
+            { "model": "modernindustry:block/tesla_coil_focus", "y": 90 },
+            { "model": "modernindustry:block/tesla_coil_focus", "y": 180 },
+            { "model": "modernindustry:block/tesla_coil_focus", "y": 270 } ]
+     }
+}

@@ -1,11 +1,11 @@
 package modepat.modernindustry.blocks;
 
+import modepat.modernindustry.core.objects.ItemCore;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.Item;
-import modepat.modernindustry.core.ItemCore;
 
 public class BlockMaterialStorage extends Block {
 

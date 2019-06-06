@@ -29,7 +29,12 @@ import net.minecraftforge.items.ItemStackHandler;
 public class TileEntityGearBox extends TileEntity implements ITickable{
 
 	private EnumGearBox enumGearBox;
-	private ItemStackHandler inventory = new ItemStackHandler();
+	private ItemStackHandler inventory = new ItemStackHandler() {
+		@Override
+		public int getSlotLimit(int slot) {
+			return 1;
+			};
+	};
 	private boolean updateNeeded, enumSearching;
 	private final long INVALID_TIME = 0;
 	private long lastTime = INVALID_TIME;

@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -27,6 +28,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import modepat.modernindustry.api.ReferenceModernIndustry;
+import modepat.modernindustry.api.SoundEventModernIndustry;
 import modepat.modernindustry.blocks.BlockFlowBattery;
 import modepat.modernindustry.blocks.BlockGearBox;
 import modepat.modernindustry.blocks.BlockGearBox.EnumGearBox;
@@ -34,16 +36,20 @@ import modepat.modernindustry.blocks.BlockMaterialStorage;
 import modepat.modernindustry.blocks.BlockMaterialStorage.EnumMaterialStorageBlock;
 import modepat.modernindustry.blocks.BlockModernOre;
 import modepat.modernindustry.blocks.BlockSpecialGlass;
+import modepat.modernindustry.blocks.BlockTeslaCoil;
+import modepat.modernindustry.blocks.BlockTeslaCoilFocus;
 import modepat.modernindustry.blocks.BlockSpecialGlass.EnumSpecialGlass;
 import modepat.modernindustry.blocks.BlockModernOre.EnumModernOre;
-import modepat.modernindustry.core.BlockCore;
-import modepat.modernindustry.core.ItemBlockCore;
-import modepat.modernindustry.core.ItemCore;
+import modepat.modernindustry.core.objects.BlockCore;
+import modepat.modernindustry.core.objects.ItemBlockCore;
+import modepat.modernindustry.core.objects.ItemCore;
 import modepat.modernindustry.gui.GUIFlowBattery;
 import modepat.modernindustry.items.ItemCuttingTool;
 import modepat.modernindustry.items.ItemMonkeyWrench;
 import modepat.modernindustry.tileentities.TileEntityFlowBattery;
 import modepat.modernindustry.tileentities.TileEntityGearBox;
+import modepat.modernindustry.tileentities.TileEntityTeslaCoil;
+import modepat.modernindustry.tileentities.TileEntityTeslaCoilFocus;
 import modepat.modernindustry.tileentities.ter.RendererGearBox;
 
 @Mod("modernindustry")
@@ -76,6 +82,7 @@ public class ModernIndustryMain
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doOnClient);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        
         FMLJavaModLoadingContext.get().getModEventBus().addGenericListener(TileEntityType.class, this::registerTileEntities);
         
        
@@ -83,13 +90,11 @@ public class ModernIndustryMain
 
     private void setup(final FMLCommonSetupEvent event) {
         // some preinit code
-        LOGGER.info("MODERN INDUSTRY SETUP METHOD CALLED");
     }
 
     private void doOnClient(final FMLClientSetupEvent event) {
     	ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGearBox.class, new RendererGearBox());
         // do something that can only be done on the client
-        LOGGER.info("MODERN INDUSTRY CLIENT METHOD CALLED");
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
@@ -104,6 +109,7 @@ public class ModernIndustryMain
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));*/
     }
+    
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
@@ -121,17 +127,57 @@ public class ModernIndustryMain
     	ReferenceModernIndustry.TILE_ENTITY_TYPE_GEAR_BOX = TileEntityType.Builder.create(TileEntityGearBox::new).build(null);
     	ReferenceModernIndustry.TILE_ENTITY_TYPE_GEAR_BOX.setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, "gearbox_tile_entity"));
     	event.getRegistry().register(ReferenceModernIndustry.TILE_ENTITY_TYPE_GEAR_BOX);
-
     	
-		LOGGER.info("MODERN INDUSTRY TILE ENTITIES REGISTERED");
-	}
+    	ReferenceModernIndustry.TILE_ENTITY_TYPE_TESLA_COIL = TileEntityType.Builder.create(TileEntityTeslaCoil::new).build(null);
+    	ReferenceModernIndustry.TILE_ENTITY_TYPE_TESLA_COIL.setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, "tesla_coil_tile_entity"));
+    	event.getRegistry().register(ReferenceModernIndustry.TILE_ENTITY_TYPE_TESLA_COIL);
+    	
+    	ReferenceModernIndustry.TILE_ENTITY_TYPE_TESLA_COIL_FOCUS = TileEntityType.Builder.create(TileEntityTeslaCoilFocus::new).build(null);
+    	ReferenceModernIndustry.TILE_ENTITY_TYPE_TESLA_COIL_FOCUS.setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, "tesla_coil_focus_tile_entity"));
+    	event.getRegistry().register(ReferenceModernIndustry.TILE_ENTITY_TYPE_TESLA_COIL_FOCUS);
 
-    // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
-    // Event bus for receiving Registry Events)
+	}
     
     @Mod.EventBusSubscriber(modid = ReferenceModernIndustry.MODID ,bus=Mod.EventBusSubscriber.Bus.MOD)
     @ObjectHolder(ReferenceModernIndustry.MODID)
     public static class RegistryEvents {
+    	
+    	 @SubscribeEvent
+         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
+         	blockRegistryEvent.getRegistry().registerAll(
+         			
+         			//Tile Entities
+         			BlockCore.flow_battery = new BlockFlowBattery().setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, "flow_battery")),
+         			BlockCore.basic_gearbox = new BlockGearBox(EnumGearBox.BASIC).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumGearBox.BASIC.getName())),
+         			BlockCore.advanced_gearbox = new BlockGearBox(EnumGearBox.ADVANCED).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumGearBox.ADVANCED.getName())),
+         			BlockCore.refined_gearbox = new BlockGearBox(EnumGearBox.REFINED).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumGearBox.REFINED.getName())),
+         			BlockCore.tesla_coil = new BlockTeslaCoil().setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, "tesla_coil")),
+         			BlockCore.tesla_coil_focus = new BlockTeslaCoilFocus().setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, "tesla_coil_focus")),
+         			
+         			//Ores
+         			BlockCore.aluminum_ore = new BlockModernOre(EnumModernOre.ALUMINUM).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumModernOre.ALUMINUM.getName())),
+         			BlockCore.gallium_ore = new BlockModernOre(EnumModernOre.GALLIUM).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumModernOre.GALLIUM.getName())),
+         			
+         			//Frames
+         			
+         			
+         			//Lamps
+         			
+         			
+         			//Material Storage
+         			BlockCore.aluminum_ingot_block = new BlockMaterialStorage(EnumMaterialStorageBlock.ALUMINUM).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumMaterialStorageBlock.ALUMINUM.getName())),
+         			BlockCore.gallium_ingot_block = new BlockMaterialStorage(EnumMaterialStorageBlock.GALLIUM).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumMaterialStorageBlock.GALLIUM.getName())),
+         			BlockCore.porous_metal_ingot_block = new BlockMaterialStorage(EnumMaterialStorageBlock.POROUS_METAL).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumMaterialStorageBlock.POROUS_METAL.getName())),
+         			
+         			//Various
+         			BlockCore.destabilized_glass_block = new BlockSpecialGlass(EnumSpecialGlass.UNSTABLE).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumSpecialGlass.UNSTABLE.getName())),
+         			BlockCore.stabilized_glass_block = new BlockSpecialGlass(EnumSpecialGlass.STABLE).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumSpecialGlass.STABLE.getName()))
+         			
+         			
+         			);
+
+             LOGGER.info("MODERN INDUSTRY BLOCKS REGISTERED");
+         }
     	
     	 @SubscribeEvent
          public static void onItemsRegistry(final RegistryEvent.Register<Item> itemRegistryEvent) {
@@ -170,11 +216,15 @@ public class ModernIndustryMain
          			ItemCore.registerItem(ItemCore.shrapnel, ReferenceModernIndustry.MODERNINDUSTRYGROUP, "shrapnel"),
          			ItemCore.registerItem(ItemCore.crystal_seed, ReferenceModernIndustry.MODERNINDUSTRYGROUP, "crystal_seed"),
          			
+         			//ItemBlocks
+         			
          			//Tile Entities
         			ItemBlockCore.registerItemBlock(ItemBlockCore.flow_battery_item, "flow_battery", BlockCore.flow_battery, ReferenceModernIndustry.MODERNINDUSTRYGROUP, 1),
         			ItemBlockCore.registerItemBlock(ItemBlockCore.basic_gearbox_item, EnumGearBox.BASIC.getName(), BlockCore.basic_gearbox, ReferenceModernIndustry.MODERNINDUSTRYGROUP),
         			ItemBlockCore.registerItemBlock(ItemBlockCore.advanced_gearbox_item, EnumGearBox.ADVANCED.getName(), BlockCore.advanced_gearbox, ReferenceModernIndustry.MODERNINDUSTRYGROUP),
         			ItemBlockCore.registerItemBlock(ItemBlockCore.refined_gearbox_item, EnumGearBox.REFINED.getName(), BlockCore.refined_gearbox, ReferenceModernIndustry.MODERNINDUSTRYGROUP),
+        			ItemBlockCore.registerItemBlock(ItemBlockCore.tesla_coil_item, "tesla_coil", BlockCore.tesla_coil, ReferenceModernIndustry.MODERNINDUSTRYGROUP, 16),
+        			ItemBlockCore.registerItemBlock(ItemBlockCore.tesla_coil_focus_item, "tesla_coil_focus", BlockCore.tesla_coil_focus, ReferenceModernIndustry.MODERNINDUSTRYGROUP, 16),
 			
         			//Ores
         			ItemBlockCore.registerItemBlock(ItemBlockCore.aluminum_ore_item, EnumModernOre.ALUMINUM.getName(), BlockCore.aluminum_ore, ReferenceModernIndustry.MODERNINDUSTRYGROUP),
@@ -190,46 +240,19 @@ public class ModernIndustryMain
         			ItemBlockCore.registerItemBlock(ItemBlockCore.stabilized_glass_block_item, EnumSpecialGlass.STABLE.getName(), BlockCore.stabilized_glass_block, ReferenceModernIndustry.MODERNINDUSTRYGROUP)
          			
          			);
-         	
-         	LOGGER.info("MODERN INDUSTRY ITEMS REGISTERED");
+       
          }
         
         @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-        	blockRegistryEvent.getRegistry().registerAll(
-        			
-        			//Tile Entities
-        			BlockCore.flow_battery = new BlockFlowBattery().setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, "flow_battery")),
-        			BlockCore.basic_gearbox = new BlockGearBox(EnumGearBox.BASIC).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumGearBox.BASIC.getName())),
-        			BlockCore.advanced_gearbox = new BlockGearBox(EnumGearBox.ADVANCED).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumGearBox.ADVANCED.getName())),
-        			BlockCore.refined_gearbox = new BlockGearBox(EnumGearBox.REFINED).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumGearBox.REFINED.getName())),
-        			
-        			//Ores
-        			BlockCore.aluminum_ore = new BlockModernOre(EnumModernOre.ALUMINUM).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumModernOre.ALUMINUM.getName())),
-        			BlockCore.gallium_ore = new BlockModernOre(EnumModernOre.GALLIUM).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumModernOre.GALLIUM.getName())),
-        			
-        			//Frames
-        			
-        			
-        			//Lamps
-        			
-        			
-        			//Material Storage
-        			BlockCore.aluminum_ingot_block = new BlockMaterialStorage(EnumMaterialStorageBlock.ALUMINUM).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumMaterialStorageBlock.ALUMINUM.getName())),
-        			BlockCore.gallium_ingot_block = new BlockMaterialStorage(EnumMaterialStorageBlock.GALLIUM).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumMaterialStorageBlock.GALLIUM.getName())),
-        			BlockCore.porous_metal_ingot_block = new BlockMaterialStorage(EnumMaterialStorageBlock.POROUS_METAL).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumMaterialStorageBlock.POROUS_METAL.getName())),
-        			
-        			//Various
-        			BlockCore.destabilized_glass_block = new BlockSpecialGlass(EnumSpecialGlass.UNSTABLE).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumSpecialGlass.UNSTABLE.getName())),
-        			BlockCore.stabilized_glass_block = new BlockSpecialGlass(EnumSpecialGlass.STABLE).setRegistryName(new ResourceLocation(ReferenceModernIndustry.MODID, EnumSpecialGlass.STABLE.getName()))
-        			
-        			
-        			);
-
-            LOGGER.info("MODERN INDUSTRY BLOCKS REGISTERED");
-        }
-        
-        
+        public static void onSoundEventRegistry(final RegistryEvent.Register<SoundEvent> soundEventRegistryEvent) {
+        	soundEventRegistryEvent.getRegistry().registerAll(
+   				 SoundEventModernIndustry.AMBIENT_DARK.setRegistryName(SoundEventModernIndustry.ambient_dark_resource_location),
+   				 SoundEventModernIndustry.AMBIENT_DARK_2.setRegistryName(SoundEventModernIndustry.ambient_dark_2_resource_location),
+   				 SoundEventModernIndustry.RECORD_MAZE.setRegistryName(SoundEventModernIndustry.record_maze_resource_location),
+   				 SoundEventModernIndustry.RECORD_WAVES.setRegistryName(SoundEventModernIndustry.record_waves_resource_location)
+        	);
+   	 	}
+ 
     }
     
 }

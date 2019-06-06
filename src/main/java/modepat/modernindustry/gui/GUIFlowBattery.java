@@ -12,7 +12,6 @@ import net.minecraft.util.ResourceLocation;
 public class GUIFlowBattery extends GuiContainer {
 
 	private static final ResourceLocation GUI_TEX = new ResourceLocation(ReferenceModernIndustry.MODID + ":textures/gui/container/flow_battery_gui.png");
-	@SuppressWarnings("unused")
 	private TileEntityFlowBattery tileEntityFlowBattery;
 	
 	public GUIFlowBattery(InventoryPlayer playerInv, TileEntityFlowBattery tileEntityFlowBattery) {

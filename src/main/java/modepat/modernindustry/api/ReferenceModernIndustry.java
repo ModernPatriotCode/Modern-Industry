@@ -4,6 +4,8 @@ import modepat.modernindustry.ModernIndustryItemGroup;
 import modepat.modernindustry.ModernIndustryMain;
 import modepat.modernindustry.tileentities.TileEntityFlowBattery;
 import modepat.modernindustry.tileentities.TileEntityGearBox;
+import modepat.modernindustry.tileentities.TileEntityTeslaCoil;
+import modepat.modernindustry.tileentities.TileEntityTeslaCoilFocus;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.tileentity.TileEntityType;
 
@@ -19,6 +21,8 @@ public class ReferenceModernIndustry {
 	
 	public static TileEntityType<TileEntityFlowBattery> TILE_ENTITY_TYPE_FLOW_BATTERY;
 	public static TileEntityType<TileEntityGearBox> TILE_ENTITY_TYPE_GEAR_BOX;
+	public static TileEntityType<TileEntityTeslaCoil> TILE_ENTITY_TYPE_TESLA_COIL;
+	public static TileEntityType<TileEntityTeslaCoilFocus> TILE_ENTITY_TYPE_TESLA_COIL_FOCUS;
 	
 	public static String NBT_RECEIVE_BOOLEAN_KEY = "can_receive";
 	public static String NBT_EXTRACT_BOOLEAN_KEY = "can_extract";

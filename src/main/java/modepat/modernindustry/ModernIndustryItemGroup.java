@@ -1,6 +1,6 @@
 package modepat.modernindustry;
 
-import modepat.modernindustry.core.BlockCore;
+import modepat.modernindustry.core.objects.BlockCore;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
