@@ -14,21 +14,19 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
-import net.minecraft.tileentity.TileEntityLockable;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
-public class TileEntityGearBox extends TileEntityLockable implements ITickable, ISidedInventory{
+public class TileEntityGearBox extends TileEntity implements ITickable{
 
 	private EnumGearBox enumGearBox;
 	private ItemStackHandler inventory = new ItemStackHandler();
@@ -61,6 +59,16 @@ public class TileEntityGearBox extends TileEntityLockable implements ITickable, 
 			this.saveAndSync();
 			this.updateNeeded = false;
 		}
+	}
+	
+	public int getStackCount() {
+		int count = 0;
+		for (int i = 0; i < this.inventory.getSlots(); i++) {
+			if(!this.inventory.getStackInSlot(i).isEmpty()) {
+				count++;
+			}
+		}
+		return count;
 	}
 	
 	@Override
@@ -99,19 +107,12 @@ public class TileEntityGearBox extends TileEntityLockable implements ITickable, 
 		this.markDirty();
 	}
 
-	@Override
 	public void clear() {
 		for (int i = 0; i < this.inventory.getSlots(); i++) {
 			this.inventory.setStackInSlot(i, ItemStack.EMPTY);
 		}
 	}
 
-	@Override
-	public void closeInventory(EntityPlayer arg0) {
-		
-	}
-
-	@Override
 	public ItemStack decrStackSize(int index, int count) {
 		if(index >= 0 && index < this.inventory.getSlots() && inventory.getStackInSlot(index)!= ItemStack.EMPTY && count > 0) {
 			return inventory.getStackInSlot(index).split(count);
@@ -145,32 +146,22 @@ public class TileEntityGearBox extends TileEntityLockable implements ITickable, 
 		return "block." + ReferenceModernIndustry.MODID + "gearbox_type_unknown";
 	}
 
-	@Override
-	public int getField(int arg0) {
-		return 0;
-	}
 
-	@Override
-	public int getFieldCount() {
-		return 0;
-	}
-
-	@Override
 	public int getInventoryStackLimit() {
 		return 1;
 	}
 
-	@Override
+	
 	public int getSizeInventory() {
 		return this.inventory.getSlots();
 	}
 
-	@Override
+
 	public ItemStack getStackInSlot(int index) {
 		return this.inventory.getStackInSlot(index);
 	}
 
-	@Override
+
 	public boolean isEmpty() {
 		for (int i = 0; i < this.inventory.getSlots(); i++ ) {
 			if(!this.inventory.getStackInSlot(i).isEmpty()) {
@@ -189,12 +180,6 @@ public class TileEntityGearBox extends TileEntityLockable implements ITickable, 
 		return true;
 	}
 
-	@Override
-	public boolean isItemValidForSlot(int arg0, ItemStack arg1) {
-		return true;
-	}
-
-	@Override
 	public boolean isUsableByPlayer(EntityPlayer arg0) {
 		if (world.getTileEntity(pos) != this) {
 			return false;
@@ -203,24 +188,15 @@ public class TileEntityGearBox extends TileEntityLockable implements ITickable, 
 		}
 	}
 
-	@Override
-	public void openInventory(EntityPlayer arg0) {
-		
-	}
-
-	@Override
+	
 	public ItemStack removeStackFromSlot(int index) {
 		ItemStack stack = inventory.getStackInSlot(index);
 		inventory.setStackInSlot(index, ItemStack.EMPTY);
 		return stack;
 	}
 
-	@Override
-	public void setField(int arg0, int arg1) {
-		
-	}
 
-	@Override
+
 	public void setInventorySlotContents(int index, ItemStack stack) {
 		ItemStack stackAtIndex = inventory.getStackInSlot(index);
 		boolean flag = !stack.isEmpty() && stack.isItemEqual(stackAtIndex) && ItemStack.areItemsEqual(stack, stackAtIndex);
@@ -299,27 +275,18 @@ public class TileEntityGearBox extends TileEntityLockable implements ITickable, 
 		return nextAngularPosition1;
 	}
 
-	@Override
+
 	public Container createContainer(InventoryPlayer playerInv, EntityPlayer player) {
 		return new ContainerGearBox(playerInv, this);
 	}
 
-	@Override
-	public String getGuiID() {
-		return null;
-	}
 
-	@Override
+	
 	public boolean canExtractItem(int index, ItemStack stack, EnumFacing facing) {
 		return facing == EnumFacing.DOWN;
 	}
 
-	@Override
-	public boolean canInsertItem(int index, ItemStack stack, EnumFacing facing) {
-		return isItemValidForSlot(index, stack) && facing == EnumFacing.UP;
-	}
-
-	@Override
+	
 	public int[] getSlotsForFace(EnumFacing facing) {
 		List<Integer> indexForSlots = new ArrayList<Integer>();
 		for (int i = 0; i < this.inventory.getSlots(); i++) {
@@ -330,21 +297,6 @@ public class TileEntityGearBox extends TileEntityLockable implements ITickable, 
 
 	public EnumGearBox getEnumGearBox() {
 		return this.enumGearBox;
-	}
-
-	@Override
-	public ITextComponent getCustomName() {
-		return null;
-	}
-
-	@Override
-	public ITextComponent getName() {
-		return null;
-	}
-
-	@Override
-	public boolean hasCustomName() {
-		return false;
 	}
 
 }
