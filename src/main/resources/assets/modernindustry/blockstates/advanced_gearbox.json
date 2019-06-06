@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "": [
+            { "model": "modernindustry:block/advanced_gearbox" },
+            { "model": "modernindustry:block/advanced_gearbox", "y": 90 },
+            { "model": "modernindustry:block/advanced_gearbox", "y": 180 },
+            { "model": "modernindustry:block/advanced_gearbox", "y": 270 },
+            { "model": "modernindustry:block/advanced_gearbox_state_1" },
+            { "model": "modernindustry:block/advanced_gearbox_state_1", "y": 90 },
+            { "model": "modernindustry:block/advanced_gearbox_state_1", "y": 180 },
+            { "model": "modernindustry:block/advanced_gearbox_state_1", "y": 270 },
+            { "model": "modernindustry:block/advanced_gearbox_state_2" },
+            { "model": "modernindustry:block/advanced_gearbox_state_2", "y": 90 },
+            { "model": "modernindustry:block/advanced_gearbox_state_2", "y": 180 },
+            { "model": "modernindustry:block/advanced_gearbox_state_2", "y": 270 },
+            { "model": "modernindustry:block/advanced_gearbox_state_3" },
+            { "model": "modernindustry:block/advanced_gearbox_state_3", "y": 90 },
+            { "model": "modernindustry:block/advanced_gearbox_state_3", "y": 180 },
+            { "model": "modernindustry:block/advanced_gearbox_state_3", "y": 270 }
+        ]
+     }
+}

@@ -1,0 +1,8 @@
+{
+    "variants": {
+ 		"facing=north": { "model": "modernindustry:block/flow_battery" },
+        "facing=south": { "model": "modernindustry:block/flow_battery", "y": 180 },
+        "facing=west":  { "model": "modernindustry:block/flow_battery", "y": 270 },
+        "facing=east":  { "model": "modernindustry:block/flow_battery", "y": 90 }
+    }
+}

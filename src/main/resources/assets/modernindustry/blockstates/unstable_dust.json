@@ -1,0 +1,21 @@
+{
+    "variants": {
+        "normal": [
+            {
+                "model": "modernindustry:unstable_dust"
+            },
+            {
+                "model": "modernindustry:unstable_dust",
+                "y": 90
+            },
+            {
+                "model": "modernindustry:unstable_dust",
+                "y": 180
+            },
+            {
+                "model": "modernindustry:unstable_dust",
+                "y": 270
+            }
+        ]
+    }
+}

@@ -1,0 +1,244 @@
+{
+    "textures": {
+        "particle": "modernindustry:block/flow_battery_side",
+        "flow_battery_access": "modernindustry:block/flow_battery_access",
+        "flow_battery_chamber": "modernindustry:block/flow_battery_chamber",
+        "flow_battery_side": "modernindustry:block/flow_battery_side",
+        "flow_battery_frame_and_access_port": "modernindustry:block/flow_battery_frame_and_access_port"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 135, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1.1, 1.1, 1.1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 135, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.4, 0.4, 0.4 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.3, 0.3, 0.3 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "Bottom N",
+            "from": [ 2, 0, 0 ], 
+            "to": [ 14, 2, 2 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "up": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "down": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] }
+            }
+        },
+        {
+            "name": "Bottom S",
+            "from": [ 2, 0, 14 ], 
+            "to": [ 14, 2, 16 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "up": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "down": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] }
+            }
+        },
+        {
+            "name": "Bottom W",
+            "from": [ 0, 0, 0 ], 
+            "to": [ 2, 2, 16 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 2 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 16, 2 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 2 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 16, 2 ] },
+                "up": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 16 ] },
+                "down": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 16 ] }
+            }
+        },
+        {
+            "name": "Bottom E",
+            "from": [ 14, 0, 0 ], 
+            "to": [ 16, 2, 16 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 2 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 16, 2 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 2 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 16, 2 ] },
+                "up": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 16 ] },
+                "down": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 16 ] }
+            }
+        },
+        {
+            "name": "Top N",
+            "from": [ 2, 14, 0 ], 
+            "to": [ 14, 16, 2 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "up": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "down": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] }
+            }
+        },
+        {
+            "name": "Top S",
+            "from": [ 2, 14, 14 ], 
+            "to": [ 14, 16, 16 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "up": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] },
+                "down": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 12, 2 ] }
+            }
+        },
+        {
+            "name": "Top W",
+            "from": [ 0, 14, 0 ], 
+            "to": [ 2, 16, 16 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 2 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 16, 2 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 2 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 16, 2 ] },
+                "up": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 16 ] },
+                "down": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 16 ] }
+            }
+        },
+        {
+            "name": "Top E",
+            "from": [ 14, 14, 0 ], 
+            "to": [ 16, 16, 16 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 2 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 16, 2 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 2 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 16, 2 ] },
+                "up": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 16 ] },
+                "down": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 16 ] }
+            }
+        },
+        {
+            "name": "NW",
+            "from": [ 0, 2, 0 ], 
+            "to": [ 2, 14, 2 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] }
+            }
+        },
+        {
+            "name": "NE",
+            "from": [ 14, 2, 0 ], 
+            "to": [ 16, 14, 2 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] }
+            }
+        },
+        {
+            "name": "SE",
+            "from": [ 14, 2, 14 ], 
+            "to": [ 16, 14, 16 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] }
+            }
+        },
+        {
+            "name": "SW",
+            "from": [ 0, 2, 14 ], 
+            "to": [ 2, 14, 16 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 2, 12 ] }
+            }
+        },
+        {
+            "name": "Middle",
+            "from": [ 2, 2, 2 ], 
+            "to": [ 14, 14, 14 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_chamber", "uv": [ 0, 0, 16, 16 ] },
+                "east": { "texture": "#flow_battery_side", "uv": [ 0, 0, 16, 16 ] },
+                "south": { "texture": "#flow_battery_side", "uv": [ 0, 0, 16, 16 ] },
+                "west": { "texture": "#flow_battery_side", "uv": [ 0, 0, 16, 16 ] },
+                "up": { "texture": "#flow_battery_access", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#flow_battery_access", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Top Access",
+            "from": [ 6, 14, 6 ], 
+            "to": [ 10, 16, 10 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 4, 5 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 4, 4 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 5, 4 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 6, 2, 10, 6 ] },
+                "up": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 2, 2, 14, 14 ] }
+            }
+        },
+        {
+            "name": "Bottom Access",
+            "from": [ 6, 0, 6 ], 
+            "to": [ 10, 2, 10 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 4, 2 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 4, 2 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 4, 2 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 4, 2 ] },
+                "down": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 2, 2, 14, 14 ] }
+            }
+        },
+        {
+            "name": "Bottom Access Base",
+            "from": [ 5, 1, 5 ], 
+            "to": [ 11, 2, 11 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 6, 1 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 6, 1 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 6, 1 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 6, 1 ] },
+                "down": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 2, 2, 14, 14 ] }
+            }
+        },
+        {
+            "name": "Top Access Base",
+            "from": [ 5, 14, 5 ], 
+            "to": [ 11, 15, 11 ], 
+            "faces": {
+                "north": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 6, 2 ] },
+                "east": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 6, 2 ] },
+                "south": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 6, 2 ] },
+                "west": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 0, 0, 6, 3 ] },
+                "up": { "texture": "#flow_battery_frame_and_access_port", "uv": [ 2, 2, 14, 14 ] }
+            }
+        }
+    ]
+}

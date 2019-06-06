@@ -1,0 +1,40 @@
+{
+	"itemGroup.modernindustry": "Modern Industry",
+	"item.modernindustry.gallium_ingot": "Gallium Ingot",
+	"item.modernindustry.aluminum_ingot": "Aluminum Ingot",
+	"item.modernindustry.porous_metal_ingot": "Porous Metal Ingot",
+	
+	"item.modernindustry.destabilized_glass_shard": "Destabilized Glass Shard",
+	"item.modernindustry.stabilized_glass_shard": "Stabilized Glass Shard",
+	"item.modernindustry.gallium_crystal": "Gallium Crystal",
+	"item.modernindustry.alumina_crystal": "Alumina Crystal",
+	"item.modernindustry.hematite_crystal": "Hematite Crystal",
+	
+	"item.modernindustry.thermite_powder": "Thermite Powder",
+	"item.modernindustry.aluminum_oxide_powder": "Aluminum Oxide Powder",
+	"item.modernindustry.iron_oxide_powder": "Iron Oxide Powder",
+	
+	"item.modernindustry.coil": "Coil",
+	"item.modernindustry.magnet": "Magnet",
+	"item.modernindustry.conducting_bits": "Conducting Bits",
+	
+	"item.modernindustry.monkey_wrench": "Monkey Wrench",
+	"item.modernindustry.cutting_tool": "Cutting Tool",
+	"item.modernindustry.conducting_focus": "Conducting Focus",
+	
+	"item.modernindustry.shrapnel": "Shrapnel",
+	"item.modernindustry.crystal_seed": "Crystal Seed",
+	
+	"block.modernindustry.flow_battery": "Flow Battery",
+	
+	"block.modernindustry.gallium_ore": "Gallium Ore",
+	"block.modernindustry.aluminum_ore": "Aluminum Ore",
+	
+	"block.modernindustry.gallium_ingot_block": "Gallium Block",
+	"block.modernindustry.aluminum_ingot_block": "Aluminum Block",
+	"block.modernindustry.porous_metal_ingot_block": "Porous Metal Block",
+	
+	"block.modernindustry.destabilized_glass_block": "Destabilized Glass",
+	"block.modernindustry.stabilized_glass_block": "Stabilized Glass"
+	
+}

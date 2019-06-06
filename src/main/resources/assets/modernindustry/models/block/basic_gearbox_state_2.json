@@ -1,0 +1,484 @@
+{
+    "textures": {
+        "particle": "modernindustry:block/basic_gearbox_wood_b",
+        "basic_gearbox": "modernindustry:block/basic_gearbox_wood_b",
+        "basic_gearbox_pipeset_b": "modernindustry:block/basic_gearbox_pipeset_e",
+        "basic_gearbox_pipeset_d": "modernindustry:block/basic_gearbox_pipeset_a",
+        "damaged_anvil_top": "block/damaged_anvil_top",
+        "basic_gearbox_pipeset_f": "modernindustry:block/basic_gearbox_pipeset_d",
+        "basic_gearbox_pipeset_e": "modernindustry:block/basic_gearbox_wood_c"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 45, 0 ],
+            "translation": [ 0, 1, 0 ],
+            "scale": [ 0.725, 0.725, 0.725 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.3, 0.3, 0.3 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, -2 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 8, 0 ],
+            "scale": [ 1.3, 1.3, 1.3 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.4, 0.4, 0.4 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "Base 1",
+            "from": [ 1, 0, 1 ], 
+            "to": [ 3, 1, 2 ], 
+            "faces": {
+                "north": { "texture": "#basic_gearbox", "uv": [ 13, 0, 10, 1 ] },
+                "east": { "texture": "#basic_gearbox", "uv": [ 7, 0, 8, 1 ] },
+                "south": { "texture": "#basic_gearbox", "uv": [ 4, 0, 6, 1 ] },
+                "west": { "texture": "#basic_gearbox", "uv": [ 9, 0, 10, 1 ] },
+                "down": { "texture": "#basic_gearbox", "uv": [ 7, 0, 9, 1 ] }
+            }
+        },
+        {
+            "name": "Base 2",
+            "from": [ 1, 0, 2 ], 
+            "to": [ 2, 1, 3 ], 
+            "faces": {
+                "east": { "texture": "#basic_gearbox", "uv": [ 3, 0, 4, 1 ] },
+                "south": { "texture": "#basic_gearbox", "uv": [ 9, 0, 10, 1 ] },
+                "west": { "texture": "#basic_gearbox", "uv": [ 9, 0, 10, 1 ] },
+                "down": { "texture": "#basic_gearbox", "uv": [ 6, 0, 7, 1 ] }
+            }
+        },
+        {
+            "name": "Base 3",
+            "from": [ 1, 0, 14 ], 
+            "to": [ 3, 1, 15 ], 
+            "faces": {
+                "north": { "texture": "#basic_gearbox", "uv": [ 6, 0, 8, 1 ] },
+                "east": { "texture": "#basic_gearbox", "uv": [ 5, 0, 6, 1 ] },
+                "south": { "texture": "#basic_gearbox", "uv": [ 8, 0, 10, 1 ] },
+                "west": { "texture": "#basic_gearbox", "uv": [ 7, 0, 8, 1 ] },
+                "down": { "texture": "#basic_gearbox", "uv": [ 7, 0, 9, 1 ] }
+            }
+        },
+        {
+            "name": "Base 4",
+            "from": [ 1, 0, 13 ], 
+            "to": [ 2, 1, 14 ], 
+            "faces": {
+                "north": { "texture": "#basic_gearbox", "uv": [ 3, 0, 4, 1 ] },
+                "east": { "texture": "#basic_gearbox", "uv": [ 5, 0, 6, 1 ] },
+                "west": { "texture": "#basic_gearbox", "uv": [ 11, 0, 12, 1 ] },
+                "down": { "texture": "#basic_gearbox", "uv": [ 7, 0, 8, 1 ] }
+            }
+        },
+        {
+            "name": "Base 5",
+            "from": [ 14, 0, 1 ], 
+            "to": [ 15, 1, 3 ], 
+            "faces": {
+                "north": { "texture": "#basic_gearbox", "uv": [ 2, 0, 3, 1 ] },
+                "east": { "texture": "#basic_gearbox", "uv": [ 5, 0, 7, 1 ] },
+                "south": { "texture": "#basic_gearbox", "uv": [ 7, 0, 6, 1 ] },
+                "west": { "texture": "#basic_gearbox", "uv": [ 3, 0, 5, 1 ] },
+                "down": { "texture": "#basic_gearbox", "uv": [ 0, 4, 1, 6 ] }
+            }
+        },
+        {
+            "name": "Base 6",
+            "from": [ 13, 0, 1 ], 
+            "to": [ 14, 1, 2 ], 
+            "faces": {
+                "north": { "texture": "#basic_gearbox", "uv": [ 5, 0, 6, 1 ] },
+                "south": { "texture": "#basic_gearbox", "uv": [ 11, 0, 12, 1 ] },
+                "west": { "texture": "#basic_gearbox", "uv": [ 10, 0, 11, 1 ] },
+                "down": { "texture": "#basic_gearbox", "uv": [ 0, 4, 1, 5 ] }
+            }
+        },
+        {
+            "name": "Base 7",
+            "from": [ 14, 0, 13 ], 
+            "to": [ 15, 1, 15 ], 
+            "faces": {
+                "north": { "texture": "#basic_gearbox", "uv": [ 6, 0, 7, 1 ] },
+                "east": { "texture": "#basic_gearbox", "uv": [ 5, 0, 7, 1 ] },
+                "south": { "texture": "#basic_gearbox", "uv": [ 5, 0, 6, 1 ] },
+                "west": { "texture": "#basic_gearbox", "uv": [ 5, 0, 7, 1 ] },
+                "down": { "texture": "#basic_gearbox", "uv": [ 0, 4, 1, 6 ] }
+            }
+        },
+        {
+            "name": "Base 8",
+            "from": [ 13, 0, 14 ], 
+            "to": [ 14, 1, 15 ], 
+            "faces": {
+                "north": { "texture": "#basic_gearbox", "uv": [ 4, 0, 5, 1 ] },
+                "south": { "texture": "#basic_gearbox", "uv": [ 8, 0, 9, 1 ] },
+                "west": { "texture": "#basic_gearbox", "uv": [ 9, 0, 10, 1 ] },
+                "down": { "texture": "#basic_gearbox", "uv": [ 4, 0, 5, 1 ] }
+            }
+        },
+        {
+            "name": "Cube Base",
+            "from": [ 1, 1, 1 ], 
+            "to": [ 15, 2, 15 ], 
+            "faces": {
+                "north": { "texture": "#basic_gearbox", "uv": [ 3, 0, 12, 1 ] },
+                "east": { "texture": "#basic_gearbox", "uv": [ 2, 0, 14, 1 ] },
+                "south": { "texture": "#basic_gearbox", "uv": [ 2, 0, 14, 1 ] },
+                "west": { "texture": "#basic_gearbox", "uv": [ 2, 0, 14, 1 ] },
+                "up": { "texture": "#basic_gearbox", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#basic_gearbox", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 2, 2, 2 ], 
+            "to": [ 14, 11, 14 ], 
+            "faces": {
+                "north": { "texture": "#basic_gearbox_pipeset_d", "uv": [ 0, 0, 16, 16 ] },
+                "east": { "texture": "#basic_gearbox_pipeset_b", "uv": [ 0, 0, 16, 16 ] },
+                "south": { "texture": "#basic_gearbox_pipeset_e", "uv": [ 0, 0, 16, 16 ] },
+                "west": { "texture": "#basic_gearbox_pipeset_f", "uv": [ 0, 0, 16, 16 ] },
+                "up": { "texture": "#basic_gearbox", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Gear 1",
+            "from": [ 6, 9, 6 ], 
+            "to": [ 7, 11.5, 7 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 3, 5, 5, 6.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 3, 2, 6, 4.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 3, 2, 6, 4.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 3, 3, 5, 4.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 3, 2, 5, 4 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 3, 0, 4, 1 ] }
+            }
+        },
+        {
+            "name": "Gear Out 1",
+            "from": [ 6.3, 9, 5.5 ], 
+            "to": [ 6.7, 11.5, 6 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 6, 1, 8.4, 3.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 8, 4, 6.5, 1.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 3, 1, 4.4, 2.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 4, 3, 6.5, 6.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 7, 4, 8.4, 6.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 0, 0, 0.4, 0.5 ] }
+            }
+        },
+        {
+            "name": "Gear out 3",
+            "from": [ 4.5, 9, 7.3 ], 
+            "to": [ 5, 11.5, 7.7 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 3, 3, 6.5, 6.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 7, 5, 8.4, 7.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 6, 6, 7.5, 7.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 8, 7, 10.4, 8.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 4, 4, 6.5, 6.4 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 0, 0, 0.5, 0.4 ] }
+            }
+        },
+        {
+            "name": "Gear Out 4",
+            "from": [ 6.3, 9, 9 ], 
+            "to": [ 6.7, 11.5, 9.5 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 6, 6, 8.4, 10.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 5, 7, 8.5, 9.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 8, 7, 9.4, 8.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 5, 1, 6.5, 2.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 5, 3, 6.4, 4.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 0, 0, 0.4, 0.5 ] }
+            }
+        },
+        {
+            "name": "Gear Out 2",
+            "from": [ 8, 9, 7.3 ], 
+            "to": [ 8.5, 11.5, 7.7 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 7, 2, 8.5, 3.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 4, 1, 6.4, 3.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 3, 2, 4.5, 3.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 3, 3, 4.4, 4.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 4, 1, 5.5, 2.4 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 0, 0, 0.5, 0.4 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7, 9, 7 ], 
+            "to": [ 8, 11.5, 8 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 4, 4, 7, 5.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 5, 3, 8, 5.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 5, 2, 9, 4.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 4, 3, 7, 5.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 5, 4, 7, 6 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 7, 6, 8, 7 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 6, 9, 8 ], 
+            "to": [ 7, 11.5, 9 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 5, 3, 7, 6.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 7, 1, 9, 3.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 3, 4, 7, 6.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 6, 6, 8, 8.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 3, 2, 6, 5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 8, 2, 9, 3 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5, 9, 7 ], 
+            "to": [ 6, 11.5, 8 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 3, 3, 5, 4.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 6, 5, 8, 6.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 6, 5, 8, 6.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 5, 3, 7, 4.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 4, 1, 6, 4 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 7, 3, 8, 4 ] }
+            }
+        },
+        {
+            "name": "Middle",
+            "from": [ 6, 9, 7 ], 
+            "to": [ 7, 11.5, 8 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 5, 2, 6, 2.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 6, 0, 7, 0.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 5, 0, 6, 1.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 7, 0, 8, 0.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 5, 2, 8, 5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 8, 2, 9, 3 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7, 9, 8 ], 
+            "to": [ 7.8, 11.5, 8.8 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 3, 1, 4.8, 2.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 4, 3, 5.8, 4.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 3, 5, 4.8, 6.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 5, 4, 6.8, 5.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 4, 3, 5.8, 4.8 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 4, 4, 5.8, 5.8 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5.2, 9, 8 ], 
+            "to": [ 6, 11.5, 8.8 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 4, 6, 5.8, 7.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 6, 5, 7.8, 6.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 7, 7, 8.8, 8.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 6, 3, 7.8, 4.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 6, 2, 7.8, 3.8 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 3, 2, 4.8, 3.8 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5.2, 9, 6.2 ], 
+            "to": [ 6, 11.5, 7 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 4, 6, 5.8, 7.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 9, 5, 10.8, 6.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 5, 4, 6.8, 5.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 4, 3, 5.8, 4.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 9, 3, 10.8, 4.8 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 4, 1, 5.8, 2.8 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 7, 9, 6.2 ], 
+            "to": [ 7.8, 11.5, 7 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 8, 9, 9.8, 10.5 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 3, 4, 4.8, 5.5 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 4, 4, 5.8, 5.5 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 6, 5, 7.8, 6.5 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 3, 1, 4.8, 2.8 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 5, 1, 6.8, 2.8 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5, 9, 10 ], 
+            "to": [ 5.5, 11.25, 10.5 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 8, 1, 8.5, 1.25 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 6, 3, 6.5, 3.25 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 6, 4, 6.5, 5.25 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 9, 5, 9.5, 5.25 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 8, 6, 8.5, 6.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 5, 3, 5.5, 3.5 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5.5, 9, 10.1 ], 
+            "to": [ 6, 11.25, 10.6 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 6, 5, 7.5, 6.25 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 6, 7, 7.5, 6.25 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 5, 4, 6.5, 5.25 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 5, 4, 6.5, 5.25 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 3, 1, 4.5, 2.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 4, 1, 4.5, 1.5 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5.4, 9, 10.6 ], 
+            "to": [ 5.9, 11.25, 11.1 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 6, 7, 7.5, 9.25 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 3, 3, 6.5, 6.25 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 4, 2, 5.5, 3.25 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 3, 2, 4.5, 3.25 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 3, 4, 4.5, 5.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 7, 0, 8.5, 1.5 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 4.9, 9, 10.5 ], 
+            "to": [ 5.4, 11.25, 11 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 4, 7, 6.5, 8.25 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 6, 2, 7.5, 3.25 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 3, 5, 4.5, 6.25 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 5, 6, 6.5, 7.25 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 4, 5, 6.5, 6.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 7, 1, 7.5, 1.5 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5.4, 8.9, 10.5 ], 
+            "to": [ 5.5, 12, 10.6 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 6, 5, 5.1, 3.1 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 5, 5, 6.1, 7.1 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 6, 3, 7.1, 5.1 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 3, 3, 6.1, 4.1 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 5, 3, 7.1, 5.1 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 7, 2, 7.1, 2.1 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 4.9, 9.4, 10.5 ], 
+            "to": [ 5.4, 11.65, 11 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 3, 2, 4.5, 3.25 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 6, 1, 7.5, 2.25 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 5, 4, 6.5, 5.25 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 6, 2, 8.5, 4.25 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 4, 4, 5.5, 5.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 4, 2, 5.5, 3.5 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5.4, 9.4, 10.6 ], 
+            "to": [ 5.9, 11.65, 11.1 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 4, 4, 7.5, 5.25 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 4, 5, 6.5, 6.25 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 3, 5, 5.5, 7.25 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 6, 6, 7.5, 8.25 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 4, 2, 6.5, 4.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 4, 2, 5.5, 4.5 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5, 9.4, 10 ], 
+            "to": [ 5.5, 11.65, 10.5 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 5, 6, 9.5, 7.25 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 3, 3, 6.5, 5.25 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 5, 6, 7.5, 7.25 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 5, 1, 11.5, 2.25 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 6, 0, 8.5, 2.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 5, 3, 7.5, 5.5 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5.5, 9.4, 10.1 ], 
+            "to": [ 6, 11.65, 10.6 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 7, 4, 7.5, 4.25 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 5, 4, 5.5, 4.25 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 9, 1, 9.5, 1.25 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 8, 2, 8.5, 2.25 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 5, 1, 7.5, 3.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 3, 6, 4.5, 7.5 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 10.5, 10.4, 7.1 ], 
+            "to": [ 11, 11.65, 9.6 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 7, 4, 7.5, 4.25 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 5, 4, 5.5, 4.25 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 9, 1, 9.5, 1.25 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 8, 2, 8.5, 2.25 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 5, 1, 7.5, 3.5 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 3, 6, 4.5, 7.5 ] }
+            }
+        }
+    ]
+}

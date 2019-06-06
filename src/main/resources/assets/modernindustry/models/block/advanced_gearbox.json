@@ -1,0 +1,308 @@
+{
+    "textures": {
+        "particle": "modernindustry:block/advanced_gearbox",
+        "advanced_gearbox": "modernindustry:block/advanced_gearbox",
+        "glass": "block/glass",
+        "advanced_gearbox_face_b": "modernindustry:block/advanced_gearbox_face_b",
+        "redstone_block": "block/redstone_block",
+        "advanced_gearbox_face_a": "modernindustry:block/advanced_gearbox_face_a",
+        "advanced_gearbox_side_b": "modernindustry:block/advanced_gearbox_side_b",
+        "damaged_anvil_top": "block/damaged_anvil_top",
+        "advanced_gearbox_side_a": "modernindustry:block/advanced_gearbox_side_a"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 45, 0 ],
+            "translation": [ 0, 1, 0 ],
+            "scale": [ 0.705, 0.705, 0.705 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, -1 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 6, 0 ],
+            "scale": [ 1.1, 1.1, 1.1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.4, 0.4, 0.4 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "Base",
+            "from": [ 1, 2, 1 ], 
+            "to": [ 15, 3, 15 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 14, 1 ] },
+                "east": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 14, 1 ] },
+                "south": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 14, 1 ] },
+                "west": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 14, 1 ] },
+                "up": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "Middle",
+            "from": [ 2, 3, 2 ], 
+            "to": [ 14, 4, 14 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 12, 1 ] },
+                "east": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 12, 1 ] },
+                "south": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 12, 1 ] },
+                "west": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 12, 1 ] }
+            }
+        },
+        {
+            "name": "Main",
+            "from": [ 1.4, 3.5, 1.4 ], 
+            "to": [ 14.6, 12.5, 14.6 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox_face_a", "uv": [ 0, 0, 16, 16 ] },
+                "east": { "texture": "#advanced_gearbox_side_a", "uv": [ 0, 0, 16, 16 ] },
+                "south": { "texture": "#advanced_gearbox_face_b", "uv": [ 0, 0, 16, 16 ] },
+                "west": { "texture": "#advanced_gearbox_side_b", "uv": [ 0, 0, 16, 16 ] },
+                "up": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 16, 16 ] },
+                "down": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 16, 16 ] }
+            }
+        },
+        {
+            "name": "baseG",
+            "from": [ 2, 1, 2 ], 
+            "to": [ 3, 2, 14 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 1 ] },
+                "east": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 12, 1 ] },
+                "south": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 1 ] },
+                "west": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 12, 1 ] },
+                "down": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 12 ] }
+            }
+        },
+        {
+            "name": "baseG2",
+            "from": [ 13, 1, 2 ], 
+            "to": [ 14, 2, 14 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 1 ] },
+                "east": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 12, 1 ] },
+                "south": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 1 ] },
+                "west": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 12, 1 ] },
+                "down": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 12 ] }
+            }
+        },
+        {
+            "name": "baseG3",
+            "from": [ 3, 1, 2 ], 
+            "to": [ 13, 2, 3 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 10, 1 ] },
+                "south": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 10, 1 ] },
+                "down": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 10, 1 ] }
+            }
+        },
+        {
+            "name": "baseG4",
+            "from": [ 3, 1, 13 ], 
+            "to": [ 13, 2, 14 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 10, 1 ] },
+                "south": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 10, 1 ] },
+                "down": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 10, 1 ] }
+            }
+        },
+        {
+            "name": "Stand",
+            "from": [ 1, 0, 1 ], 
+            "to": [ 2, 2, 2 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "east": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "south": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "west": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "down": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 1 ] }
+            }
+        },
+        {
+            "name": "Stand2",
+            "from": [ 14, 0, 1 ], 
+            "to": [ 15, 2, 2 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "east": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "south": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "west": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "down": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 1 ] }
+            }
+        },
+        {
+            "name": "Stand3",
+            "from": [ 14, 0, 14 ], 
+            "to": [ 15, 2, 15 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "east": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "south": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "west": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "down": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 1 ] }
+            }
+        },
+        {
+            "name": "Stand4",
+            "from": [ 1, 0, 14 ], 
+            "to": [ 2, 2, 15 ], 
+            "faces": {
+                "north": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "east": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "south": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "west": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 2 ] },
+                "down": { "texture": "#advanced_gearbox", "uv": [ 0, 0, 1, 1 ] }
+            }
+        },
+        {
+            "name": "Gear 1",
+            "from": [ 6, 12, 6 ], 
+            "to": [ 8, 13, 8 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 7, 0, 10, 2 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 5, 1, 8, 3 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 9, 0, 12, 2 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 6, 0, 9, 2 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 6, 3, 12, 9 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 5, 1, 8, 4 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 5.7, 12, 6.6 ], 
+            "to": [ 6, 12.9, 7.4 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 6, 2, 8.3, 3 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 7, 1, 7.8, 1.9 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 5, 0, 7.3, 1 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 5, 1, 5.8, 1.9 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 8, 0, 9.3, 0.8 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 6, 2, 8.3, 2.8 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 8, 12, 6.6 ], 
+            "to": [ 8.3, 12.9, 7.4 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 9, 6, 9.3, 6.9 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 9, 7, 9.8, 7.9 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 7, 5, 7.3, 5.9 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 9, 0, 9.8, 0.9 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 10, 5, 10.3, 5.8 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 11, 4, 11.3, 4.8 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 6.6, 12, 5.7 ], 
+            "to": [ 7.4, 12.9, 6 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 8, 8, 8.8, 8.9 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 9, 8, 9.3, 8.9 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 10, 6, 10.8, 6.9 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 6, 5, 6.3, 5.9 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 9, 7, 9.8, 7.3 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 5, 7, 5.8, 7.3 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 6.6, 12, 8 ], 
+            "to": [ 7.4, 12.9, 8.3 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 22.5 },
+            "faces": {
+                "north": { "texture": "#damaged_anvil_top", "uv": [ 5, 2, 5.8, 2.9 ] },
+                "east": { "texture": "#damaged_anvil_top", "uv": [ 10, 3, 10.3, 3.9 ] },
+                "south": { "texture": "#damaged_anvil_top", "uv": [ 6, 5, 6.8, 5.9 ] },
+                "west": { "texture": "#damaged_anvil_top", "uv": [ 5, 4, 5.3, 4.9 ] },
+                "up": { "texture": "#damaged_anvil_top", "uv": [ 7, 3, 7.8, 3.3 ] },
+                "down": { "texture": "#damaged_anvil_top", "uv": [ 7, 3, 7.8, 3.3 ] }
+            }
+        },
+        {
+            "name": "Glass",
+            "from": [ 9, 12, 9 ], 
+            "to": [ 11, 13, 11 ], 
+            "faces": {
+                "north": { "texture": "#glass", "uv": [ 0, 0, 2, 1 ] },
+                "east": { "texture": "#glass", "uv": [ 0, 0, 2, 1 ] },
+                "south": { "texture": "#glass", "uv": [ 0, 0, 2, 1 ] },
+                "west": { "texture": "#glass", "uv": [ 9, 0, 11, 1 ] },
+                "up": { "texture": "#glass", "uv": [ 0, 0, 5, 5 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 9, 12.8, 9 ], 
+            "to": [ 9.5, 14.9, 11 ], 
+            "faces": {
+                "north": { "texture": "#glass", "uv": [ 9, 0, 14.5, 1.1 ] },
+                "east": { "texture": "#glass", "uv": [ 11, 0, 16, 6.1 ] },
+                "south": { "texture": "#glass", "uv": [ 8, 0, 12.5, 0.1 ] },
+                "west": { "texture": "#glass", "uv": [ 0, 0, 6, 6.1 ] },
+                "up": { "texture": "#glass", "uv": [ 8, 0, 14.5, 1 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 10.5, 12.8, 9 ], 
+            "to": [ 11, 14.9, 11 ], 
+            "faces": {
+                "east": { "texture": "#glass", "uv": [ 11, 9, 16, 16.1 ] },
+                "west": { "texture": "#glass", "uv": [ 0, 0, 6, 6.1 ] },
+                "up": { "texture": "#glass", "uv": [ 8, 0, 14.5, 1 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 9.5, 12.8, 9 ], 
+            "to": [ 11, 14.9, 9.5 ], 
+            "faces": {
+                "north": { "texture": "#glass", "uv": [ 9, 0, 15.5, 8.1 ] },
+                "south": { "texture": "#glass", "uv": [ 7, 0, 13.5, 7.1 ] },
+                "up": { "texture": "#glass", "uv": [ 8, 0, 14.5, 1 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 9.5, 12.8, 10.5 ], 
+            "to": [ 11, 14.9, 11 ], 
+            "faces": {
+                "north": { "texture": "#glass", "uv": [ 9, 0, 15.5, 8.1 ] },
+                "south": { "texture": "#glass", "uv": [ 7, 0, 13.5, 7.1 ] },
+                "up": { "texture": "#glass", "uv": [ 8, 0, 14.5, 1 ] }
+            }
+        },
+        {
+            "name": "Cube",
+            "from": [ 9.5, 12.8, 9.5 ], 
+            "to": [ 10.5, 13.9, 10.5 ], 
+            "faces": {
+                "up": { "texture": "#redstone_block", "uv": [ 5, 6, 11.5, 12 ] }
+            }
+        }
+    ]
+}

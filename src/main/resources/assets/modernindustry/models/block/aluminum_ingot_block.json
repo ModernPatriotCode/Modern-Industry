@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "modernindustry:block/aluminum_ingot_block"
+    }
+}

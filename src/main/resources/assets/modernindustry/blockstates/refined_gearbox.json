@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "": [
+            { "model": "modernindustry:block/refined_gearbox" },
+            { "model": "modernindustry:block/refined_gearbox", "y": 90 },
+            { "model": "modernindustry:block/refined_gearbox", "y": 180 },
+            { "model": "modernindustry:block/refined_gearbox", "y": 270 },
+            { "model": "modernindustry:block/refined_gearbox_state_1" },
+            { "model": "modernindustry:block/refined_gearbox_state_1", "y": 90 },
+            { "model": "modernindustry:block/refined_gearbox_state_1", "y": 180 },
+            { "model": "modernindustry:block/refined_gearbox_state_1", "y": 270 }
+        ]
+     }
+}
